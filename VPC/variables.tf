@@ -15,16 +15,24 @@ variable "cidr" {
 
 #Environment name
 variable "env" {
-  description = "environment used as a prefix"
+  description = "environment used as a prefix for VPC name"
   type        = string
   default     = "DEV"
+
+  validation {
+    condition = contains(["DEV", "dev", "PROD", "prod", "STAG", "stag"], var.env)
+    error_message = "enter the right environment: dev, stag, prod"
+  }
 }
 
 #Department name
 variable "department" {
-  description = "department name as a prefix"
+  description = "department name as a prefix for VPC name"
   type        = string
   default     = "HR"
+  validation {
+    condition = contains(["HR", "hr", "BILL", "BILL", "ADMIN", "admin"], var.department)
+    error_message = "enter the right department: HR, ADMIN, BILL"
 }
 
 #Availability zone 
