@@ -1,3 +1,4 @@
+#VARIABLES TO CREATE VPC
 
 #Region
 variable "aws_region" {
@@ -7,7 +8,7 @@ variable "aws_region" {
 }
 
 variable "cidr" {
-  description = "cidr bloc"
+  description = "cidr block"
   type        = string
   default     = "10.0.0.0/16"
 }
