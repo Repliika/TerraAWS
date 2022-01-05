@@ -62,14 +62,14 @@ variable "database_subnets" {
 }
 
 # VPC create DB subent(True/False)
-variable "vpc_create_database_subnet_group" {
+variable "create_database_subnet_group" {
   description = "VPC create DB Subnet group"
   type        = bool
   default     = true
 }
 
 # VPC create DB route table (True/False)
-variable "vpc_create_database_subnet_route_table" {
+variable "create_database_subnet_route_table" {
   description = "VPC create DB route table for DB subnet"
   type        = bool
   default     = true
@@ -77,14 +77,14 @@ variable "vpc_create_database_subnet_route_table" {
 
 
 # VPC Enable NAT Gateway (True/False) 
-variable "vpc_enable_nat_gateway" {
+variable "enable_nat_gateway" {
   description = "enable NAT Gateways for egress communication"
   type        = bool
   default     = true
 }
 
 # VPC single NAT Gateway per AZ (True/False)
-variable "vpc_single_nat_gateway" {
+variable "single_nat_gateway" {
   description = "one NAT Gateway per AZ"
   type        = bool
   default     = true
