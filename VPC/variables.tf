@@ -1,5 +1,12 @@
 #VARIABLES TO CREATE VPC
 
+#Profile for credentials
+variable "profile" {
+  description = "enter AWS profile name that is configured"
+  type = string
+  default = "Default"
+}
+
 #Region
 variable "aws_region" {
   description = "region to create"
@@ -58,7 +65,7 @@ variable "private_subnets" {
 variable "database_subnets" {
   description = "CIDR for DB subnets"
   type        = list(string)
-  default     = ["10.0.110.0/24", "10.0.102.111/24"]
+  default     = ["10.0.108.0/24", "10.0.102.109/24"]
 }
 
 # VPC create DB subent(True/False)

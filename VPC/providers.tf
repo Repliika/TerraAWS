@@ -1,4 +1,4 @@
-#Provider block
+#PROVIDER BLOCK
 
 terraform {
   required_version = "~> 0.14"
@@ -13,5 +13,5 @@ terraform {
 provider "aws" {
   # Configuration options
   region  = var.aws_region
-  profile = "ginoo"
+  profile = var.profile
 }
