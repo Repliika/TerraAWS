@@ -7,7 +7,7 @@ module "vpc" {
 
 
   #SUBNET DECLARATIONS
-  azs              = var.az
+  azs              = var.azs
   public_subnets   = var.public_subnets
   private_subnets  = var.private_subnets
   database_subnets = var.database_subnets
@@ -20,7 +20,7 @@ module "vpc" {
   #create_database_nat_gateway_route = true
 
   #CREATE + ENABLE NAT, DNS
-  enable_nat_gateway = var.venable_nat_gateway
+  enable_nat_gateway = var.enable_nat_gateway
   single_nat_gateway = var.single_nat_gateway
   #enable_nat_gateway = true
   #single_nat_gatway = true

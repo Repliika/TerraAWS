@@ -3,8 +3,8 @@
 #Profile for credentials
 variable "profile" {
   description = "enter AWS profile name that is configured"
-  type = string
-  default = "Default"
+  type        = string
+  default     = "Default"
 }
 
 #Region
@@ -27,8 +27,8 @@ variable "env" {
   default     = "DEV"
 
   validation {
-    condition = contains(["DEV", "dev", "PROD", "prod", "STAG", "stag"], var.env)
-    error_message = "enter the right environment: dev, stag, prod"
+    condition     = contains(["DEV", "dev", "PROD", "prod", "STAG", "stag"], var.env)
+    error_message = "Enter the right environment: dev, stag, prod."
   }
 }
 
@@ -38,12 +38,13 @@ variable "department" {
   type        = string
   default     = "HR"
   validation {
-    condition = contains(["HR", "hr", "BILL", "BILL", "ADMIN", "admin"], var.department)
-    error_message = "enter the right department: HR, ADMIN, BILL"
+    condition     = contains(["HR", "hr", "BILL", "BILL", "ADMIN", "admin"], var.department)
+    error_message = "Enter the right department: HR, ADMIN, BILL."
+  }
 }
 
 #Availability zone 
-variable "az" {
+variable "azs" {
   type    = list(string)
   default = ["eu-east-1a", "eu-east-1b"]
 }
