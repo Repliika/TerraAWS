@@ -1,15 +1,15 @@
 # VPC OUTPUTS
 
 # VPC ID
-output "VPC_name" {
+output "vpc_id" {
   description = "name of VPC"
-  value       = module.vpc.name
+  value       = module.vpc.vpc_id
 }
 
 # VPC CIDR blocks
 output "VPC_CIDR" {
   description = "The CIDR block of the VPC"
-  value       = module.vpc.cidr
+  value       = module.vpc.vpc_cidr_block
 }
 
 # VPC Private Subnets
@@ -31,7 +31,7 @@ output "NAT_public_ips" {
 }
 
 # VPC AZs
-output "AZs" {
+output "azs" {
   description = "List of availability zones used"
   value       = module.vpc.azs
 }

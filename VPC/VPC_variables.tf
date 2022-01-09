@@ -102,10 +102,10 @@ variable "single_nat_gateway" {
 locals {
   department = var.department
   env        = var.env
-  vpc_name   = "${var.department}-${var.env}"
+  vpc_id     = "${var.department}-${var.env}"
   common_tags = {
     department  = local.department
     environment = local.env
-    vpc         = local.vpc_name
+    vpc         = local.vpc_id
   }
 }
